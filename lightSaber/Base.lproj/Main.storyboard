@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lightSaber" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,42 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="saber1.png" translatesAutoresizingMaskIntoConstraints="NO" id="v3h-Ju-GIr">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="800" id="hkR-cv-UlM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v3h-Ju-GIr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1iY-Ki-IA9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v3h-Ju-GIr" secondAttribute="trailing" id="JHR-Rb-HDr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="v3h-Ju-GIr" secondAttribute="bottom" id="KJW-iU-h5F"/>
+                            <constraint firstItem="v3h-Ju-GIr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VFO-9d-veL"/>
+                            <constraint firstItem="v3h-Ju-GIr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cFw-Qd-FXh"/>
+                            <constraint firstItem="v3h-Ju-GIr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="itr-hh-pAK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="v3h-Ju-GIr" secondAttribute="bottom" id="sha-bZ-9td"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JHR-Rb-HDr"/>
+                                <exclude reference="VFO-9d-veL"/>
+                                <exclude reference="cFw-Qd-FXh"/>
+                                <exclude reference="sha-bZ-9td"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="mainImage" destination="v3h-Ju-GIr" id="X9c-Vt-DGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="saber1.png" width="400" height="300"/>
+    </resources>
 </document>
